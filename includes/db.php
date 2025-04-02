@@ -1,8 +1,8 @@
 <?php
-$servername = "bljazoj7p9lmqk5hjipv-mysql.services.clever-cloud.com";
-$username = "uu6mtxlqbxk5cyyl";
-$password = "HJdoY3kc3jyxT0WYooY6";
-$dbname = "bljazoj7p9lmqk5hjipv";
+$servername = "baqoze9aqiwnr6yg63n9-mysql.services.clever-cloud.com";
+$username = "ulnh9vhu3qfuwq2j";
+$password = "6fBsnjgIhXIQVcWyQOyZ";
+$dbname = "baqoze9aqiwnr6yg63n9";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
