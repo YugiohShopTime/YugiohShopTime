@@ -1,0 +1,518 @@
+/* Estilos generales */
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #0066cc;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: red;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a2e;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #e6b800;
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+/* Header y navegación */
+header {
+    background: #1a1a2e;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.carrito-icon {
+    position: relative;
+}
+
+.carrito-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* Hero section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/yugioh-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Productos */
+.destacados {
+    margin: 40px 0;
+}
+
+.destacados h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+.producto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto-card h3 {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+}
+
+.producto-card .precio {
+    padding: 0 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.disponibilidad {
+    padding: 5px 15px;
+}
+
+.disponible {
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.agotado {
+    color: var(--danger-color);
+    font-weight: bold;
+}
+
+.producto-card .btn {
+    margin: 15px;
+    width: calc(100% - 30px);
+}
+
+/* Carrito */
+.carrito-items {
+    margin: 20px 0;
+}
+
+.carrito-item {
+    display: flex;
+    background: #962dd45c;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.carrito-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.carrito-item h3 {
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+.carrito-item .eliminar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.carrito-total {
+    text-align: right;
+    font-size: 1.3rem;
+    margin: 20px 0;
+}
+
+.carrito-total span {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.carrito-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Checkout */
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.info-envio, .resumen-compra {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.resumen-items {
+    margin: 20px 0;
+}
+
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Mensajes */
+.mensaje {
+    padding: 10px 15px;
+    background: var(--success-color);
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.errores {
+    padding: 15px;
+    background: #f8d7da;
+    color: #721c24;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+    /* Mover los iconos al header en móvil */
+    .mobile-tooltips {
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        padding: 10px 15px;
+        background: var(--header-bg-color); /* Ajusta según tu diseño */
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Ocultar los originales en móvil */
+    .desktop-tooltips {
+        display: none;
+    }
+    
+    /* Estilos para los iconos en móvil */
+    .mobile-tooltips .fa-tooltip {
+        font-size: 1.2rem;
+        color: var(--text-color); /* Ajusta el color */
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-tooltips {
+        display: none;
+    }
+    
+    .desktop-tooltips {
+        display: block;
+    }
+}
+/* Responsive */
+@media (max-width: 768px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    
+    .carrito-item {
+        flex-direction: column;
+    }
+    
+    .carrito-item img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+}
+/* ======================
+   Tooltip de Usuario
+   ====================== */
+
+.user-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.user-tooltip .tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(0,0,0,0.7);
+    color: #FFD166; /* Color principal amarillo-naranja */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1000;
+    bottom: 15%;
+    left: 100%;
+    transform: translateX(-50%);
+    margin-left: 10px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    font-weight: 100;
+    pointer-events: none;
+}
+
+.user-tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.7) transparent transparent transparent;
+}
+
+.user-tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Icono de usuario */
+.user-icon {
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.user-icon:hover {
+    color: #FFD166;
+    transform: scale(1.1);
+}
+
+/* Variantes de color (opcionales) */
+.user-tooltip.orange-intense .tooltip-text {
+    color: #FFB347;
+}
+
+.user-tooltip.light-yellow .tooltip-text {
+    color: #FFDE7D;
+}
+
+.user-tooltip.custom-color .tooltip-text {
+    color: #FDB750;
+}
+.user-float {
+    position: fixed; /* Cambiado de absolute a fixed para mejor posicionamiento */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 25px; /* Distancia desde la derecha */
+    z-index: 1000;
+}
+/* Ajustar posición del tooltip cuando está en la parte inferior */
+.user-float .user-tooltip .tooltip-text {
+    bottom: auto;
+    top: 100%;
+    margin-top: 10px;
+}
+
+.user-float .user-tooltip .tooltip-text::after {
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent rgba(0,0,0,0.8) transparent;
+}
